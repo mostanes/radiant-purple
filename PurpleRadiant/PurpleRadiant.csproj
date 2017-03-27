@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CD3440F-8EA7-4C51-9C82-467703B2D2E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PurpleRadiant</RootNamespace>
+    <AssemblyName>PurpleRadiant</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>0.2-beta</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <Description>PurpleRadiant is a TUI Library</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Release\PurpleRadiant.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextBuf.cs" />
+    <Compile Include="Window.cs" />
+    <Compile Include="BoxGraphics.cs" />
+    <Compile Include="BufferConsole.cs" />
+    <Compile Include="VirtualConsole.cs" />
+    <Compile Include="Widgets\IWidget.cs" />
+    <Compile Include="Widgets\WidgetContainer.cs" />
+    <Compile Include="Widgets\Screen.cs" />
+    <Compile Include="Widgets\ListBox.cs" />
+    <Compile Include="Widgets\InputBoxMini.cs" />
+    <Compile Include="Widgets\Button.cs" />
+    <Compile Include="Widgets\CheckBox.cs" />
+    <Compile Include="Widgets\ScrollableArea.cs" />
+    <Compile Include="Widgets\InputBoxMultiLine.cs" />
+    <Compile Include="Widgets\TextArea.cs" />
+    <Compile Include="Widgets\PasswordField.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Widgets\" />
+  </ItemGroup>
+</Project>
